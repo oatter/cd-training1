@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('confirm version') {
             steps {
-                nodejs('node.18.3.0') {
+                nodejs('node') {
                     sh 'node -v'
                     sh 'npm -v'
                 }
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('install node packages') {
             steps {
-                nodejs('node.18.3.0') {
+                nodejs('node') {
                     sh 'npm install'
                 }
             }
